@@ -5,7 +5,7 @@ from django.contrib.auth import authenticate
 User = get_user_model()
 
 
-class UserRegister(serializers.ModelSerializer):
+class UserSignUp(serializers.ModelSerializer):
 
     password = serializers.CharField(
         style={'input_type': 'password'}, write_only=True)
@@ -26,7 +26,7 @@ class UserRegister(serializers.ModelSerializer):
 
 
 class LoginSerializers(serializers.Serializer):
-    name = serializers.CharField()
+    username = serializers.CharField()
     password = serializers.CharField()
 
     class Meta:

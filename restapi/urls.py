@@ -21,6 +21,6 @@ from api import views
 
 urlpatterns = [
     re_path(r'^admin/', admin.site.urls),
-    path('register', views.register.as_view(), name='register'),
+    path('signup', views.signup.as_view(), name='signup'),
     path('login/', views.login.as_view(),name="login"),
 ]
